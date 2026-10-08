@@ -1,0 +1,10 @@
+services:
+  ap-audit-gateway:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      OCR_ENABLED: "true"
+      MAX_UPLOAD_MB: "15"
+    volumes:
+      - ./data:/app/data
